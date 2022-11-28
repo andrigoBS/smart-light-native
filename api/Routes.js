@@ -44,7 +44,6 @@ export function setMaxOnTime() {
 }
 
 export function setOffTime(body) {
-    console.log("Aqui", body)
     fetch(`${projectIP}/off-time`, {
         method: "POST",
         body: body
@@ -53,6 +52,19 @@ export function setOffTime(body) {
 
 export function getOffTime() {
     return fetch(`${projectIP}/off-time`, {
+        method: "GET"
+    }).then(response => response.json());
+}
+
+export function setOnTime(body) {
+    fetch(`${projectIP}/on-time`, {
+        method: "POST",
+        body: body
+    });
+}
+
+export function getOnTime() {
+    return fetch(`${projectIP}/on-time`, {
         method: "GET"
     }).then(response => response.json());
 }
