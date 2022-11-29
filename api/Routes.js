@@ -56,6 +56,12 @@ export function getOffTime() {
     }).then(response => response.json());
 }
 
+export function deleteOffTime() {
+    return fetch(`${projectIP}/off-time`, {
+        method: "DELETE"
+    }).then(response => response.json());
+}
+
 export function setOnTime(body) {
     fetch(`${projectIP}/on-time`, {
         method: "POST",
@@ -69,6 +75,11 @@ export function getOnTime() {
     }).then(response => response.json());
 }
 
+export function deleteOnTime() {
+    return fetch(`${projectIP}/on-time`, {
+        method: "DELETE"
+    }).then(response => response.json());
+}
 
 
 
